@@ -26,3 +26,63 @@
 # Optional: 
 # - Fügen Sie weitere Funktionen hinzu, wie z.B. Potenzierung oder Modulo.
 # - Implementieren Sie eine Schleife, um mehrere Berechnungen hintereinander durchzuführen, bis der Benutzer das Programm beendet.
+
+def add(number1:int, number2:int) -> int:
+    """
+    Function does add two numbers together and returns the result.
+    """
+    return number1+number2
+
+def sub(number1:int, number2:int) -> int:
+    """
+    Function does subtract two numbers together and returns the result.
+    """
+    return number1-number2
+
+def mul(number1:int, number2:int) -> int:
+    """
+    Function does multiply two numbers together and returns the result.
+    """
+    return number1*number2
+
+def div(number1:int, number2:int) -> int:
+    """
+    Function does divide two numbers together and returns the result.
+    """
+    return number1/number2
+
+def main():
+    """
+    Main function of the calculator
+    """
+    # Specifing the operator
+    op = input("Welche Operation (+, -, *, /) möchtest du durchführen? ")
+  
+    # Eingabe der Zahlen
+    zahl1 = int(input("Bitte gib die 1. Zahl ein: "))
+    zahl2 = int(input("Bitte gib die 2. Zahl ein: "))
+
+    # Durchführung der Berechnung
+    if op == '+':
+        result = add(zahl1, zahl2)
+        print("Ergebnis der Addition: ", result)
+    elif op == '-':
+        result = sub(zahl1, zahl2)
+        print("Ergebnis der Subtraktion: ", result)
+    elif op == '*':
+        result = mul(zahl1, zahl2)
+        print("Ergebnis der Multiplikation: ", result)
+    elif op == '/':
+        if zahl2 != 0:
+            result = div(zahl1, zahl2)
+            print("Ergebnis der Division: ", result)
+        else:
+            print("Division durch 0 nicht erlaubt!")
+    else:
+        print("Operation unbekannt, bitte versuche es noch einmal.")
+
+
+# Run the main function
+while 1:
+    main()
+
