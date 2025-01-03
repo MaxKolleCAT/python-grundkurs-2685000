@@ -57,3 +57,13 @@ katze.mache_geraeusch()
 # Erstellen Sie eine weitere spezifische Klasse 'Vogel', die von der allgemeinen Klasse 'Tier' erbt.
 # - Überschreiben Sie die Methode 'mache_geraeusch', sodass der Vogel ein typisches Geräusch wie "zwitschern" macht.
 # - Erstellen Sie eine Instanz der Klasse 'Vogel' und rufen Sie die Methoden 'beschreibung' und 'mache_geraeusch' auf.
+
+class Vogel(Tier):
+
+    def mache_geraeusch(self):
+        """Überschreibt die Methode und gibt das typische Geräusch eines Vogels aus."""
+        print(f"{self.name} zwitschert.")
+
+vogel = Vogel("Freddy", 13)
+vogel.beschreibung()
+vogel.mache_geraeusch()
